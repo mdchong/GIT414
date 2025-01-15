@@ -85,6 +85,14 @@ textarea:not([rows]) {
 }
 
 /* GLOBAL STYLES */
+* {
+    outline: 2px solid blue;
+}
+
+*:nth-child(even) {
+    outline: 2px solid red;
+}
+
 body {
     display: grid;
     grid-template-columns: 1fr;
