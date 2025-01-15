@@ -85,3 +85,14 @@ textarea:not([rows]) {
 }
 
 /* GLOBAL STYLES */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+/* MEDIA QUERY (MEDIUM) */
+@media screen and (min-width: 941px) {
+    body {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
