@@ -84,25 +84,119 @@ textarea:not([rows]) {
     --dough: #D9C4A3;
     --chocolate-chip: #704214;
     --crust: #C27D45;
+    --title-font: "Oi", sans-serif;
+    --body-font: "Smooch Sans", sans-serif;
 }
 
 /* GLOBAL STYLES */
-* {
+/* * {
     outline: 2px solid blue;
 }
 
 *:nth-child(even) {
     outline: 2px solid red;
+} */
+
+header p {
+    text-align: center;
+    max-width: 80ch;
+    margin: 0 auto;
+}
+
+#introduction {
+    font-weight: 800;
 }
 
 body {
-    display: grid;
-    grid-template-columns: 1fr;
+    font-family: var(--body-font);
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: var(--title-font);
+    color: var(--chocolate-chip);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+nav ul li {
+    list-style: none;
+    color: var(--chocolate-chip);
+    margin: 2rem;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav h2 {
+    visibility: hidden;
+    height: 1px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    background-color: var(--dough);
+    padding: 0.75rem;
+    display: block;
+    text-align: center;
+}
+
+section {
+    background-color: var(--crust);
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 8px;
+}
+
+footer {
+    h2, p, li {
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
 }
 
 /* MEDIA QUERY (MEDIUM) */
-@media screen and (min-width: 941px) {
-    body {
-        grid-template-columns: repeat(2, 1fr);
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        section {
+            margin: 1rem;
+        }
+    }
+}
+
+/* MEDIA QUERY (LARGE) */
+@media screen and (min-width: 1040px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* MEDIA QUERY (XL) */
+@media screen and (min-width: 1280px) {
+    main {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
